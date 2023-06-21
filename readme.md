@@ -16,6 +16,109 @@ Ce jeu de données contient plus de 8 500 films et séries télévisées Netflix
 
 <p align ="center"><img src="/img/Netflix.png"  width="150" height="150"> </p>
 
-## Chargement des données
+### Chargement des données
+ Les données sont dans un tableau au format CSV (Comma Separeted Values)
+ ```python 
+ import pandas as pd
+ df=pd.read_csv("data/data.csv")
+ ```
+ ```python 
+ df.shape
+ # (1818 rows x 11 columns)
+ ```
+ ```python
+ df.describe()
+ ```
+ ```python
+df.info()
+ ```
+  ```python
+df.columns
+ ```
+ ### Compréhension des variables :
+ - type : type de données (Movie / TV Show)
+ - title : titre de données
+ - director : réalisateur du film
+ - cast :  acteurs et actrices 
+ - country : pays où la production a été réalisée ou produit
+ - date_added : la date à laquelle été ajouté à la bibliothèque de Netflix
+ - release_year : année de sortie
+ - rating : classification
+ - duration : durée
+ - listed_in : classification (International TV, Crime TV Shows, documentaire,etc)
+ - description : discription de données
+
+## Question / Objectif
+ - Quelle est la variété de l'offre de Netflix ? Basez-vous sur trois variables : le type, le pays et les catégories listées.
+ - Visualisez : Créez un nuage de mots à partir des descriptions des films et des émissions de télévision. Assurez-vous de supprimer les mots vides (stop words) !
+ - Analyser : Est-ce que Netflix a investi davantage dans certains genres (voir les catégories listées) ces dernières années ? Et qu'en est-il de certains groupes d'âge (voir les classifications) ?
+
+ ### Exploration des données
+ Voici quelques exemples d'explorations possibles :
+ - Exploration de la variété par type :
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+variety_by_type = df['type'].value_counts().head(10)
+plt.figure(figsize=(8, 6))
+plt.bar(variety_by_type.index, variety_by_type.values)
+plt.title('Variety by Type')
+plt.xlabel('Type')
+plt.ylabel('Count')
+plt.show()
+```
+![Alt text](image-3.png)
+- Exploration de la variété par catégorie de contenu 
+```python
+variety_by_listed_in = df['listed_in'].value_counts().head(10)
+plt.figure(figsize=(12, 6))
+variety_by_listed_in.plot(kind='bar')
+plt.title('Variety by Listed_in (Top 10)')
+plt.xlabel('Listed_in')
+plt.ylabel('Count')
+plt.xticks(rotation=45)
+plt.show()
+```
+  ![Alt text](image-1.png)
+ - Exploration de la variété par pays :
+```python
+variety_by_country = df['country'].value_counts().head(10)
+plt.figure(figsize=(12, 6))
+variety_by_country.plot(kind='bar')
+plt.title('Variety by Country (Top 10)')
+plt.xlabel('Country')
+plt.ylabel('Count')
+plt.xticks(rotation=45)
+plt.show() 
+```
+![Alt text](image-2.png)
+
+## Visualisation
+- Nuage de mots apartir de description : 
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+from wordcloud import WordCloud, STOPWORDS
+
+# Concaténez les descriptions en une seule chaîne de caractères
+descriptions = " ".join(df['description'].dropna())
+
+# Remove stopwords
+stop_words = set(stopwords.words('english'))
+filtered_descriptions = ' '.join([word for word in descriptions.split() if word.lower() not in stop_words])
+
+# Créez un objet WordCloud en spécifiant les paramètres souhaités
+wordcloud = WordCloud(stopwords=stop_words, background_color='white').generate(filtered_descriptions)
+
+# Display the word cloud
+plt.imshow(wordcloud, interpolation='bilinear')
+plt.axis('off')
+plt.show()
+```
+![Alt text](image-4.png)
+
+
+
+
 
 
