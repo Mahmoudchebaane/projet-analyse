@@ -149,4 +149,43 @@ plt.show()
 ```
 ![Alt text](image-6.png)
 
+### Distribution cumulative des movie sur Netflix
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+# Filtration 
+movies = df[df['type'] == 'Movie']
+# Triez les films par année de sortie
+movies = movies.sort_values('release_year')
+#Créez une distribution cumulée
+cumulative_counts = range(1, len(movies) + 1)
+cumulative_percentages = [count / len(movies) * 100 for count in cumulative_counts]
+# Tracer la distribution cumulative
+plt.figure(figsize=(10, 6))
+plt.plot(movies['release_year'], cumulative_percentages)
+plt.title('Cumulative Distribution of Movies on Netflix')
+plt.xlabel('Release Year')
+plt.ylabel('Cumulative Percentage')
+plt.xticks(rotation=45)
+plt.show()
+```
+![Alt text](image-7.png)
+
+### Distribution cumulative des TV Shows sur Netflix par années
+```python
+# Filtration 
+tv_shows = df[df['type'] == 'TV Show']
+
+# Triez les tv show par année
+grouped_tv_shows = tv_shows.groupby('release_year').size().sort_values(ascending=False)
+# Traçage
+plt.figure(figsize=(10, 6))
+grouped_tv_shows.plot(kind='bar')
+plt.title('Distribution of TV Shows on Netflix')
+plt.xlabel('Genre')
+plt.ylabel('Count')
+plt.xticks(rotation=45)
+plt.show()
+```
+![Alt text](image-8.png)
 
