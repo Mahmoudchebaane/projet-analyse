@@ -66,7 +66,7 @@ plt.xlabel('Type')
 plt.ylabel('Count')
 plt.show()
 ```
-![Alt text](image-3.png)
+![Alt text](/img/image-3.png)
 - Exploration de la variété par catégorie de contenu 
 ```python
 variety_by_listed_in = df['listed_in'].value_counts().head(10)
@@ -78,7 +78,7 @@ plt.ylabel('Count')
 plt.xticks(rotation=45)
 plt.show()
 ```
-  ![Alt text](image-1.png)
+  ![Alt text](/img/image-1.png)
  - Exploration de la variété par pays :
 ```python
 variety_by_country = df['country'].value_counts().head(10)
@@ -90,7 +90,7 @@ plt.ylabel('Count')
 plt.xticks(rotation=45)
 plt.show() 
 ```
-![Alt text](image-2.png)
+![Alt text](/img/image-2.png)
 
 ### Visualisation
 - Nuage de mots apartir de description : 
@@ -114,7 +114,7 @@ plt.imshow(wordcloud, interpolation='bilinear')
 plt.axis('off')
 plt.show()
 ```
-![Alt text](image-4.png)
+![Alt text](/img/image-4.png)
 
 ### Analyse si Netflix a investi davantage dans certains genres et tranches d'âge ces dernières années
   ```python
@@ -134,7 +134,7 @@ plt.xlabel('Genre')
 plt.ylabel('Count')
 plt.show()
 ```
-![Alt text](image-5.png)
+![Alt text](/img/image-5.png)
 
 ```python
 # Analyser l'investissement par tranche d'âge
@@ -146,7 +146,7 @@ plt.xlabel('Age Group')
 plt.ylabel('Count')
 plt.show()
 ```
-![Alt text](image-6.png)
+![Alt text](/img/image-6.png)
 
 ### Distribution cumulative des movie sur Netflix
 ```python
@@ -168,7 +168,7 @@ plt.ylabel('Cumulative Percentage')
 plt.xticks(rotation=45)
 plt.show()
 ```
-![Alt text](image-7.png)
+![Alt text](/img/image-7.png)
 
 ### Distribution cumulative des TV Shows sur Netflix par années
 ```python
@@ -186,5 +186,5 @@ plt.ylabel('Count')
 plt.xticks(rotation=45)
 plt.show()
 ```
-![Alt text](image-8.png)
+![Alt text](/img/image-8.png)
 
