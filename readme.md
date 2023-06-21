@@ -1,5 +1,5 @@
 # PROJET NETFLIX
-![img](\img/logo-epi.png)
+<img src="/img/logo-epi.png" >
 ### Auteur(s): Chebaane Mahmoud
 -------------------------
 
