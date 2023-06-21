@@ -1,7 +1,7 @@
 # PROJET NETFLIX
 <img src="/img/logo-epi.png" >
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Mahmoudchebaane/projet-analyse/master)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Mahmoudchebaane/projet-analyse/main)
 
 <a href="https://colab.research.google.com/github/Mahmoudchebaane/projet-analyse/blob/main/Index.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
 
