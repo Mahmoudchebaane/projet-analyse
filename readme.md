@@ -1,7 +1,7 @@
 # PROJET NETFLIX
 <img src="/img/logo-epi.png" >
 ### Auteur(s): Chebaane Mahmoud
--------------------------
+----------------------------------------------------------------------------------------
 
 ## DATASET :file_folder: 
 Le dataset contient
