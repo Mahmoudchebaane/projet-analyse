@@ -14,7 +14,7 @@ les donnes suivantes:
 ## Contexte 
 Ce jeu de données contient plus de 8 500 films et séries télévisées Netflix, comprenant les membres du casting, la durée et le genre. Il inclut des titres ajoutés aussi récemment que fin septembre 2021.
 
-<img src="/img/Netflix.png"  width="150" height="150"  aligne="center">
+<p align ="center"><img src="/img/Netflix.png"  width="150" height="150"> </p>
 
 ## Chargement des données
 
