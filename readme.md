@@ -2,6 +2,9 @@
 <img src="/img/logo-epi.png" >
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Mahmoudchebaane/projet-analyse/master)
+
+<a href="https://colab.research.google.com/github/Mahmoudchebaane/projet-analyse/blob/main/Index.ipynb\" target="_parent\"><img src="https://colab.research.google.com/assets/colab-badge.svg\" alt="Open In Colab\"></a>
+
 ## DATASET :file_folder: 
 Le dataset contient
 les donnes suivantes: 
