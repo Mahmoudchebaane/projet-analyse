@@ -93,7 +93,7 @@ plt.show()
 ```
 ![Alt text](image-2.png)
 
-## Visualisation
+### Visualisation
 - Nuage de mots apartir de description : 
 ```python
 import pandas as pd
@@ -117,8 +117,36 @@ plt.show()
 ```
 ![Alt text](image-4.png)
 
+### Analyse si Netflix a investi davantage dans certains genres et tranches d'âge ces dernières années
+  ```python
+  # Extrayez les colonnes pertinentes pour l'analyse
+  subset = df[['release_year', 'listed_in', 'rating']]
+ 
+  # Filtrez l'ensemble de données pour les années récentes
+  current_year = pd.Timestamp.now().year
+  recent_subset = subset[subset['release_year'] >= current_year - 5]
 
+ # Analysez l'investissement dans le genre :
+ genre_counts = recent_subset['listed_in'].value_counts().head(10)
+plt.figure(figsize=(10, 6))
+genre_counts.plot(kind='bar')
+plt.title('Genre Investment in Recent Years')
+plt.xlabel('Genre')
+plt.ylabel('Count')
+plt.show()
+```
+![Alt text](image-5.png)
 
-
+```python
+# Analyser l'investissement par tranche d'âge
+age_counts = recent_subset['rating'].value_counts().sort_index()
+plt.figure(figsize=(10, 6))
+age_counts.plot(kind='bar')
+plt.title('Age Group Investment in Recent Years')
+plt.xlabel('Age Group')
+plt.ylabel('Count')
+plt.show()
+```
+![Alt text](image-6.png)
 
 
