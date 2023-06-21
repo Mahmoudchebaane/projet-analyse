@@ -1,7 +1,7 @@
 # PROJET NETFLIX
 <img src="/img/logo-epi.png" >
 
-
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Mahmoudchebaane/projet-analyse/main)
 
 ## DATASET :file_folder: 
 Le dataset contient
